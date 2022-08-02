@@ -42,12 +42,13 @@ def q3_countDown():
 # get name from user.  If name is Fred/Fred Flintone/Flintstone, print YABBADABBADOOO!
 def q4_checkFredFlintstone():
   name = input('Enter a name: ')
- if(name.upper() == 'FRED'):
-   print("YABBADABBADOOO!")
-     elif(name.upper() == 'FRED'):
-      print("YABBADABBADOOO!")
-    elif(name.upper() == 'FRED'):
-      print("You\'re not Fred!")
+
+  if (name.upper() == 'FRED'):
+    print("YABBADABBADOOO!")
+ # elif(name.upper() == 'FRED'):
+   # print("YABBADABBADOOO!")
+  elif (name.upper() != 'FRED'):
+    print("You\'re not Fred!")
 
 # Asks user to enter names until "stop" is entered.  Stores names and print them in reversed
 def q5_getNames():
@@ -56,7 +57,7 @@ def q5_getNames():
 
   while(name != 'stop'):
     name = input('Enter a name ("stop" to finish): ')
-  names.append(name)
+    names.append(name)
 
   index = len(names) - 1
   while(index > -1):
@@ -66,16 +67,16 @@ def q5_getNames():
   print('==========================================')
   mainMenu()
 
-# As q5_getNames().  Except this one doesn't store or print "stop"
+# As q6_getNames().  Except this one doesn't store or print "stop"
 def q6_getNamesNoStop():
   name = ''
   names = []
 
   while(name != 'stop'):
     name = input('Enter a name ("stop" to finish): ')
-  names.append(name)
-
-  index = len(names) - 1
+    names.append(name)
+  
+  index = len(names) -1
   while(index > -1):
     print(names[index])
     index -= 1
@@ -86,17 +87,17 @@ def q6_getNamesNoStop():
 # Asks user for integers until "stop" is entered.  Prints the sum of all entered numbers at the end (should only do this once)
 def q7_getSum():
   inp = ''
-  total = 1
+  total = 0
 
   while(inp != 'stop'):
-    inp = input('Enter a number: ')
+   inp = input('Enter a number: ')
     
-    if(inp.isdigit()):
-      total += int(inp)
-    elif(inp != 'stop'):
-      print('A valid number or "stop" must be entered')
-
-    print("Sum of entered numbers is: ", total)
+   if(inp.isdigit()):
+     total += int(inp)
+   elif(inp != 'stop'):
+     print('A valid number or "stop" must be entered')
+      
+  print("Sum of entered numbers is: ", total)
   
   print('==========================================')
   mainMenu()
@@ -104,7 +105,7 @@ def q7_getSum():
 # As q7_getSum().  This one will store the numbers as well.  At the end will print total and then all numbers entered
 def q8_getSumArray():
   inp = ''
-  total = 1
+  total = 0
   nums = []
   
   while(inp != 'stop'):
@@ -116,14 +117,14 @@ def q8_getSumArray():
     elif(inp != 'stop'):
       print('A valid number or "stop" must be entered')
 
-    print("Sum of entered numbers is: ", total)
+  print("Sum of entered numbers is: ", total)
 
-  # Must use the below while loop.  Cannot change to a for 
+ # Must use the below while loop.  Cannot change to a for 
   print('Numbers entered were: ')
   index = 0
   while(index < len(nums)):
-    print(nums[index])
-    index += 1
+   print(nums[index])
+   index += 1
 
   print('==========================================')
   mainMenu()
@@ -138,7 +139,7 @@ def q9_useRectangleArea():
   length = int(input('Enter rectangle length: '))
   width = int(input('Enter rectangle width: '))
 
-  print('The area of your rectangle is: ', getRectangleArea(length, width))
+  print('The area of your rectangle is: ',area)
 
   print('==========================================')
   mainMenu()
