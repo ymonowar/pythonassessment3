@@ -45,7 +45,7 @@ def q4_checkFredFlintstone():
 
   if (name.upper() == 'FRED'):
     print("YABBADABBADOOO!")
- # elif(name.upper() == 'FRED'):
+ #4 elif(name.upper() == 'FRED'):
    # print("YABBADABBADOOO!")
   elif (name.upper() != 'FRED'):
     print("You\'re not Fred!")
@@ -133,13 +133,13 @@ def q8_getSumArray():
 # Needs Debugging
 def getRectangleArea(length, width):
   area = length * width
-
+  return area
 # gets a length and width from user.  Uses the getRectangleArea function to get the area.
 def q9_useRectangleArea():
   length = int(input('Enter rectangle length: '))
   width = int(input('Enter rectangle width: '))
 
-  print('The area of your rectangle is: ',area)
+  print('The area of your rectangle is: ', getRectangleArea(length, width))
 
   print('==========================================')
   mainMenu()
