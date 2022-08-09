@@ -163,17 +163,18 @@ def q10_getPower():
 # checks if num is a prime number.  Needs debugging 
 def checkPrime(num):
   flag = False
-  counter = 0
+  counter = 2
   
   if(num > 1):
       # check for factors
       while(counter < num):
-          if (num % counter) == 1:
+        if (num % counter) == 0:
               # if factor is found, set flag to True
               flag = True
               # break out of loop
               break
-  
+        else:
+          counter +=1
   # check if flag is True
   if flag:
       return False
